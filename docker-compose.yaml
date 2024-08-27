@@ -1,4 +1,3 @@
-version: '3.3'
 services:
   elasticsearch:
     container_name: elasticsearch
@@ -62,7 +61,7 @@ services:
     links:
       - logstash:logstash
     depends_on:
-      - logstash
+      - logstash 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
